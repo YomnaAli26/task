@@ -35,7 +35,7 @@ class RegisterController extends Controller
             ]);
 
             // Send the verification code to the user's email
-            Mail::to($user->email)->send(new VerificationCodeMail($verificationCode));
+//            Mail::to($user->email)->send(new VerificationCodeMail($verificationCode));
 
             // Create an API token for the new user
             $token = $user->createToken($request->email)->plainTextToken;
